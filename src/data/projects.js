@@ -73,31 +73,6 @@ const projects = [
       "JWT",
     ],
   },
-
-  {
-    title: "MERN Stack Project",
-    icon: "⚙️",
-    description:
-      "A scalable full-stack MERN application demonstrating modern web development practices, clean architecture, and responsive UI.",
-
-    features: [
-      "RESTful API",
-      "JWT Authentication",
-      "Responsive UI",
-      "Input Validation",
-      "Database Integration",
-      "Real-Time Updates",
-    ],
-
-    tech: [
-      "React",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "Supabase",
-      "Tailwind CSS",
-    ],
-  },
 ]
 
 export default projects
