@@ -43,7 +43,7 @@ function App() {
 
             <div>
               <h4>Email</h4>
-              <p>john.doe@example.com</p>
+              <p>duludulu71@gmail.com</p>
             </div>
 
           </div>
