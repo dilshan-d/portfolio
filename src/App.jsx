@@ -1,6 +1,6 @@
 import './App.css'
 import projects from './data/projects'
-import profileImage from "./assets/profile Image.png";
+import profileImage from "./assets/profile-image.png";
 
 import {
   FaEnvelope,
