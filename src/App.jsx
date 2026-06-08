@@ -1,5 +1,6 @@
 import './App.css'
 import projects from './data/projects'
+import profileImage from "./assets/profile Image.png";
 
 import {
   FaEnvelope,
@@ -20,7 +21,7 @@ function App() {
         <div className="profile-section">
 
           <img
-            src="https://media.licdn.com/dms/image/v2/D4E35AQETLupo4fkxVQ/profile-framedphoto-shrink_400_400/B4EZ4DBD8FGkAc-/0/1778167070882?e=1780650000&v=beta&t=LK9smjD4HMBJPTMwqlT8VQ_mos8u46skmLOqAYGZTwU"
+            src={profileImage}
             alt="Profile"
             className="profile-image"
           />
@@ -32,11 +33,9 @@ function App() {
         </div>
 
         {/* INFO SECTION */}
-
         <div className="info-section">
 
           <div className="info-card">
-
             <div className="info-icon">
               <FaEnvelope />
             </div>
@@ -45,11 +44,9 @@ function App() {
               <h4>Email</h4>
               <p>duludulu71@gmail.com</p>
             </div>
-
           </div>
 
           <div className="info-card">
-
             <div className="info-icon">
               <FaPhoneAlt />
             </div>
@@ -58,11 +55,9 @@ function App() {
               <h4>Phone</h4>
               <p>0719947085</p>
             </div>
-
           </div>
 
           <div className="info-card">
-
             <div className="info-icon">
               <FaMapMarkerAlt />
             </div>
@@ -71,17 +66,14 @@ function App() {
               <h4>Location</h4>
               <p>Gampaha, Sri Lanka</p>
             </div>
-
           </div>
 
           <div className="info-card">
-
             <div className="info-icon">
               <FaGithub />
             </div>
 
             <div>
-
               <h4>GitHub</h4>
 
               <a
@@ -91,19 +83,15 @@ function App() {
               >
                 github.com/dilshan-d
               </a>
-
             </div>
-
           </div>
 
           <div className="info-card">
-
             <div className="info-icon">
               <FaLinkedin />
             </div>
 
             <div>
-
               <h4>LinkedIn</h4>
 
               <a
@@ -113,9 +101,7 @@ function App() {
               >
                 linkedin.com/in/dilshan-diluminda-392137408
               </a>
-
             </div>
-
           </div>
 
         </div>
@@ -123,7 +109,6 @@ function App() {
       </div>
 
       {/* MAIN CONTENT */}
-
       <div className="main-content">
 
         <section className="hero">
@@ -141,7 +126,6 @@ function App() {
         </section>
 
         {/* PROJECTS */}
-
         <section className="section">
 
           <h2>Projects</h2>
@@ -150,7 +134,10 @@ function App() {
 
             {projects.map((project, index) => (
 
-              <div className="project-card" key={index}>
+              <div
+                className="project-card"
+                key={index}
+              >
 
                 <h3>
                   {project.icon} {project.title}
@@ -165,21 +152,21 @@ function App() {
                   <h4>Key Features</h4>
 
                   <ul>
-
                     {project.features.map((feature, i) => (
-                      <li key={i}>{feature}</li>
+                      <li key={i}>
+                        {feature}
+                      </li>
                     ))}
-
                   </ul>
 
                 </div>
 
                 <div className="tech-stack">
-
                   {project.tech.map((tech, i) => (
-                    <span key={i}>{tech}</span>
+                    <span key={i}>
+                      {tech}
+                    </span>
                   ))}
-
                 </div>
 
               </div>
