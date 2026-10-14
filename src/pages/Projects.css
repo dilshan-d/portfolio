@@ -1,0 +1,41 @@
+/* ============================================================
+   PROJECTS PAGE
+   ============================================================ */
+.reveal-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal-up.revealed {
+  opacity: 1;
+  transform: none;
+}
+
+.projects-page {
+  min-height: calc(100vh - 64px);
+  background: var(--gradient-section);
+  padding: 5rem 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.projects-header {
+  max-width: 680px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 1.75rem;
+}
+
+@media (max-width: 780px) {
+  .projects-page { padding: 3.5rem 1.25rem; }
+  .projects-grid { grid-template-columns: 1fr; }
+}

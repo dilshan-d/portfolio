@@ -1,0 +1,200 @@
+/* ============================================================
+   CONTACT PAGE
+   ============================================================ */
+.reveal-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal-up.revealed {
+  opacity: 1;
+  transform: none;
+}
+
+.contact-page {
+  min-height: calc(100vh - 64px);
+  background: var(--gradient-section);
+  padding: 5rem 2.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+.contact-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* ── Body: two-column ── */
+.contact-body {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+/* ── Contact cards ── */
+.contact-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--gradient-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.2rem;
+  text-decoration: none;
+  color: inherit;
+  transition: transform var(--transition-base), border-color var(--transition-base), box-shadow var(--transition-base);
+}
+
+.contact-card:not(.contact-card--static):hover {
+  transform: translateX(4px);
+  border-color: var(--border-accent);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.contact-card--static {
+  cursor: default;
+}
+
+.contact-card-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: var(--accent-glow);
+  border: 1px solid var(--border-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--accent-primary);
+}
+
+.contact-card-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.contact-card-label {
+  font-family: var(--font-mono);
+  font-size: 0.70rem;
+  color: var(--text-muted);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.contact-card-value {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  word-break: break-all;
+}
+
+.contact-card:not(.contact-card--static):hover .contact-card-value {
+  color: var(--accent-secondary);
+}
+
+/* ── Form ── */
+.contact-form-wrap {
+  background: var(--gradient-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-label {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  color: var(--accent-primary);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.form-input {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 0.7rem 0.9rem;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  outline: none;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  width: 100%;
+}
+
+.form-input::placeholder { color: var(--text-muted); }
+
+.form-input:focus {
+  border-color: var(--border-accent);
+  box-shadow: 0 0 0 3px var(--accent-glow);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 130px;
+}
+
+.contact-submit {
+  align-self: flex-start;
+  margin-top: 0.25rem;
+}
+
+/* ── Sent confirmation ── */
+.contact-sent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.75rem;
+  padding: 3rem 1rem;
+}
+
+.contact-sent-icon { font-size: 2.5rem; }
+
+.contact-sent h3 {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.contact-sent p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .contact-body {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .contact-page { padding: 3rem 1.25rem; gap: 2.5rem; }
+  .contact-form-wrap { padding: 1.25rem; }
+}
